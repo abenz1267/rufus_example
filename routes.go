@@ -16,6 +16,8 @@ func registerRoutes(app *rufus.App) {
 		}
 
 		r := chi.NewRouter()
+		app.Router.PrependMiddleware(r, app.Server, app.CSPPolicy)
+
 		r.NotFound(handlers.NotFound{App: app, Language: language}.Get)
 
 		handlers.Index{App: app, Language: language}.GetRoutes(r)
