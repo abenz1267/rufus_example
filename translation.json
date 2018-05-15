@@ -1,0 +1,17 @@
+{
+  "Languages": {
+    "en": 0,
+    "de": 1
+  },
+  "Locales": {
+    "en": "en-US",
+    "de": "de-DE"
+  },
+  "Phrases": {
+    "Hello": ["Hello", "Hallo"]
+  },
+  "URL": {
+    "about": ["about", "ueber_mich"],
+    "en": ["de", "en"]
+  }
+}
