@@ -9,8 +9,10 @@ import (
 
 // Index handler struct
 type Index struct {
-	App      *rufus.App
-	Language string
+	App         *rufus.App `json:"-"`
+	Language    string     `json:"language,omitempty"`
+	Title       string     `json:"title,omitempty"`
+	Description string     `json:"description,omitempty"`
 }
 
 // GetRoutes registers routes for Index handler
@@ -19,5 +21,12 @@ func (h Index) GetRoutes(r *chi.Mux) {
 }
 
 func (h Index) get(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("hello"))
+	h.Title = "Index Page"
+	h.Description = "This is a description"
+
+	resp := rufus.Response{Status: http.StatusOK, TemplateFile: "index", Data: h}
+
+	h.App.Response = resp
+
+	h.App.Render(w, r)
 }

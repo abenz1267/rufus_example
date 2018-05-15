@@ -13,6 +13,9 @@ func main() {
 		log.Fatal(err)
 	}
 
+	cache := &rufus.Cache{}
+	app.Middleware.Cache = cache
+
 	go registerRoutes(app)
 
 	if err := app.Start(); err != nil {

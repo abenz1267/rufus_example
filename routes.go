@@ -16,6 +16,7 @@ func registerRoutes(app *rufus.App) {
 		}
 
 		r := chi.NewRouter()
+		r.NotFound(handlers.NotFound{App: app, Language: language}.Get)
 
 		handlers.Index{App: app, Language: language}.GetRoutes(r)
 

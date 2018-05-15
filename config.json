@@ -7,7 +7,8 @@
   },
   "router": {
     "middleware": {
-      "redirect_to_non_www": true
+      "redirect_to_non_www": true,
+      "enable_response_cache": true
     }
   },
   "templates": {

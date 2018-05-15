@@ -1,4 +1,5 @@
 {{define "title"}}{{ .Title }}{{end}}{{define "description"}}{{ .Description }}{{end}}{{define "content"}}
-<h1>Rufus Example</h1>
+<h1>Custom Error Page</h1>
 <h2>{{ translate "Hello" .Language }}</h2>
+<p>{{ .ErrorMessage }}</p>
 {{end}}
