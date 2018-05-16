@@ -21,6 +21,7 @@ func registerRoutes(app *rufus.App) {
 		r.NotFound(handlers.NotFound{App: app, Language: language}.Get)
 
 		handlers.Index{App: app, Language: language}.GetRoutes(r)
+		handlers.About{App: app, Language: language}.GetRoutes(r)
 
 		app.RoutesReceiver <- r
 	}

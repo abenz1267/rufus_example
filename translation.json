@@ -11,7 +11,7 @@
     "Hello": ["Hello", "Hallo"]
   },
   "URL": {
-    "about": ["about", "ueber_mich"],
+    "about": ["about", "uebermich"],
     "en": ["de", "en"]
   }
 }
